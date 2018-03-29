@@ -7,6 +7,42 @@
   <META NAME="Author" CONTENT="">
   <META NAME="Keywords" CONTENT="">
   <META NAME="Description" CONTENT="">
+	<style>
+	<!--
+	 /* Font Definitions */
+	 @font-face
+		{font-family:"Impact";
+		panose-1:2 4 5 3 5 4 6 3 2 4;}
+	@font-face
+		{font-family:"맑은 고딕";
+		panose-1:2 11 5 3 2 0 0 2 0 4;}
+	@font-face
+		{font-family:"\@맑은 고딕";
+		panose-1:2 11 5 3 2 0 0 2 0 4;}
+	@font-face
+		{font-family:HY견고딕;
+		panose-1:2 3 6 0 0 1 1 1 1 1;}
+	@font-face
+		{font-family:"\@HY견고딕";
+		panose-1:2 3 6 0 0 1 1 1 1 1;}
+	 /* Style Definitions */
+	 p.MsoNormal, li.MsoNormal, div.MsoNormal
+		{margin:0cm;
+		margin-bottom:.0001pt;
+		text-align:justify;
+		text-justify:inter-ideograph;
+		text-autospace:none;
+		word-break:break-hangul;
+		font-size:10.0pt;
+		font-family:"맑은 고딕";}
+	 /* Page Definitions */
+	 @page WordSection1
+		{size:595.3pt 841.9pt;
+		margin:3.0cm 72.0pt 72.0pt 72.0pt;}
+	div.WordSection1
+		{page:WordSection1;}
+	-->
+	</style>
   <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
   <script>
 

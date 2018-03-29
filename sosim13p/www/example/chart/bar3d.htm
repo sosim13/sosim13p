@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" />
+    <title>AGATE API Demo</title>
+</head>
+<body>
+    <p>
+        <a href="javascript:history.back()" >back</a> 
+	<a href="javascript:location.replace('index.htm')">Pie 3D</a>
+	<a href="javascript:location.replace('bar3d.htm')">Bar 3D</a>
+	<a href="javascript:location.replace('bar3dGroup.htm')">Bar 3D Group</a>
+	<a href="javascript:location.replace('line.htm')">Line</a>
+    </p>
+    <h3>
+        Chart - Bar 3D
+    </h3>
+    <hr />
+    <div style="width: 100%;">
+        <div class="bar3d_chart" id="bar3d_chart1" style="padding-top: 75%;" >
+            <script type="xml/momloverlay">
+			    <chart type="bar3d">
+				    <legendlist>
+					    <legend title="Android" color="" />
+					    <legend title="Apple" color="" />
+					    <legend title="BlackBerry" color="" />
+					    <legend title="Microsoft" color="" />
+					    <legend title="Symbian" color="" />
+				    </legendlist>
+				    <datagrouplist>
+					    <datagroup>
+						    <data value="51.6" />
+						    <data value="40.7" />
+						    <data value="4" />
+						    <data value="3.2" />
+						    <data value="0.3" />
+					    </datagroup>
+				    </datagrouplist>
+			    </chart>
+            </script>
+        </div>
+    </div>
+
+    <table border="1">
+        <tr><th>Smartphone Platform</th><th>Aug 2013</th></tr>
+        <tr><td>Android</td><td>51.6</td></tr>
+        <tr><td>Apple</td><td>40.7</td></tr>
+        <tr><td>BlackBerry</td><td>4.0</td></tr>
+        <tr><td>Microsoft</td><td>3.2</td></tr>
+        <tr><td>Symbian</td><td>0.3</td></tr>
+    </table>
+</body>
+</html>

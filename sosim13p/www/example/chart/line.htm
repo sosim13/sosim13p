@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" />
+    <title>AGATE API Demo</title>
+</head>
+<body>
+    <p>
+        <a href="javascript:history.back()" >back</a> 
+	<a href="javascript:location.replace('index.htm')">Pie 3D</a>
+	<a href="javascript:location.replace('bar3d.htm')">Bar 3D</a>
+	<a href="javascript:location.replace('bar3dGroup.htm')">Bar 3D Group</a>
+	<a href="javascript:location.replace('line.htm')">Line</a>
+    </p>
+    <h3>
+        Chart - Line
+    </h3>
+    <hr />
+    <div style="width: 100%;">
+        <div class="line_chart" id="line_chart1" style="padding-top: 50%;">
+            <script type="xml/momloverlay">
+			    <chart type="line"	>
+                    <legendlist>
+					    <legend title="Jan"/>
+					    <legend title="Feb"/>
+					    <legend title="Mar"/>
+					    <legend title="Apr"/>
+					    <legend title="May"/>
+					    <legend title="Jun"/>
+					    <legend title="Jul"/>
+					    <legend title="Aug"/>
+					    <legend title="Sep"/>
+				    </legendlist>
+				    <datagrouplist>
+					    <datagroup title="HP">
+						    <data value="300" />
+						    <data value="230" />
+						    <data value="270" />
+						    <data value="350" />
+						    <data value="290" />
+						    <data value="310" />
+						    <data value="340" />
+						    <data value="330" />
+						    <data value="320" />
+					    </datagroup>
+					    <datagroup title="Sony">
+						    <data value="270" />
+						    <data value="240" />
+						    <data value="200" />
+						    <data value="300" />
+						    <data value="200" />
+						    <data value="250" />
+						    <data value="220" />
+						    <data value="210" />
+						    <data value="240" />
+					    </datagroup>
+					    <datagroup title="IBM">
+						    <data value="200" />
+						    <data value="180" />
+						    <data value="140" />
+						    <data value="70" />
+						    <data value="100" />
+						    <data value="100" />
+						    <data value="70" />
+						    <data value="50" />
+						    <data value="200" />
+					    </datagroup>
+				    </datagrouplist>
+			    </chart>
+            </script>
+        </div>
+    </div>
+
+    <table border="1">
+        <tr><th>Month</th>  <th>HP</th>    <th>Sony</th>  <th>IBM</th></tr>
+        <tr><td>Jan</td>    <td>300</td>   <td>270</td>   <td>200</td></tr>
+        <tr><td>Feb</td>    <td>230</td>   <td>240</td>   <td>180</td></tr>
+        <tr><td>Mar</td>    <td>270</td>   <td>200</td>   <td>140</td></tr>
+        <tr><td>Apr</td>    <td>350</td>   <td>300</td>   <td>70</td></tr>
+        <tr><td>May</td>    <td>290</td>   <td>200</td>   <td>100</td></tr>
+        <tr><td>Jun</td>    <td>310</td>   <td>250</td>   <td>100</td></tr>
+        <tr><td>Jul</td>    <td>340</td>   <td>220</td>   <td>70</td></tr>
+        <tr><td>Aug</td>    <td>330</td>   <td>210</td>   <td>50</td></tr>
+        <tr><td>Sep</td>    <td>320</td>   <td>240</td>   <td>200</td></tr>
+    </table>
+</body>
+</html>

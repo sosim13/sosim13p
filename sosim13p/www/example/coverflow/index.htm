@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" />
+    <title>AGATE API Demo</title>
+</head>
+<body>
+    <a href="javascript:" onclick="history.back()" >back</a>
+    <h3>
+        Coverflow
+    </h3>
+    <hr />
+        <div style="width:100%;">
+            <div class="coverflowOverlay" id="coverflowOverlay" style="padding-top:80%;">
+
+                <script type="xml/momloverlay">
+                    <coverflow id="coverflow" dataSource="http://yooic.com/agate/coverflow/coverflowData.xml"
+                        onChange="{container.parent.src='javascript:coverflow_onChange('+container.coverflow.index+')'}"
+                        dataList="/IMAGELIST/ITEM" imagePath="@src" index="0"
+                        shadow="mirror" defaultImg="#ffffff"/>
+                </script>
+
+            </div>
+        </div>
+        
+        <form id="info" action="javascript:">
+        Rank : <input id="rank" type="text" disabled="true" /><br />
+        Title : <input id="title" type="text" disabled="true" size="30"/><br />
+        Artist : <input id="artist" type="text" disabled="true" /><br />
+        </form>
+    
+    <script type="text/javascript">
+
+        function coverflow_init() {
+            agate.runAction("userVariable.coverflowData = file.read('http://yooic.com/agate/coverflow/coverflowData.xml')");
+            coverflow_onChange(0);
+        }
+
+        function coverflow_onChange(index) {
+            var xPathIndex = index + 1;
+            info.rank.value = xPathIndex;
+            info.title.value = agate.runAction("xpath.evaluateEx(userVariable.coverflowData, '/IMAGELIST/ITEM[" + xPathIndex + "]/@title')");
+            info.artist.value = agate.runAction("xpath.evaluateEx(userVariable.coverflowData, '/IMAGELIST/ITEM[" + xPathIndex + "]/@artist')");
+        }
+
+        setTimeout("coverflow_init()", 500);
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Created by MoSPI.org on 11.12.2012
+
+	Permission is granted to copy, distribute, modify under the terms of Citrine License.
+
+	Copyright (C) MoSPI.org. All rights reserved.
+-->
+<MOML version="1.1.0">
+	<UI>
+		<UILAYOUT portrait="300,300" landscape="300,300" >
+			<IMAGE layout="0,0,300,300" defaultImg="img/sample{userVariable.imgIndex + 1}.jpg" />
+			<LABEL layout="110,280,80,20" text="sample{userVariable.imgIndex + 1}.jpg" textAlign="center" defaultImg="#80AAAAAA"/>
+		</UILAYOUT>
+    </UI>
+    <FUNCTIONCALL cmd="userVariable.imgIndex=(userVariable.imgIndex + 1) % 4" />
+</MOML>

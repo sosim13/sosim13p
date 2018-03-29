@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" />
+    <title>AGATE API Demo</title>
+</head>
+<body>
+    <a href="javascript:" onclick="history.back()" >back</a> 
+    <h3>
+        Camera
+    </h3>
+    <hr />
+    <center>
+        <div style="width: 30%;">
+            <div class="cameraOverlay" id="cameraOverlay" style="padding-top: 120%;">
+
+                <script type="xml/momloverlay">
+                    <camera id="camera"/> 
+                </script>
+
+            </div>
+        </div>
+        <button onclick="agate.runAction('cameraOverlay.camera.open()')">
+            Open
+        </button>
+        
+        <button onclick="agate.runAction('cameraOverlay.camera.close()')">
+            Close
+        </button>
+        
+        <button onclick="agate.runAction('cameraOverlay.camera.type=\'front\'')">
+            Front
+        </button>
+        
+        <button onclick="agate.runAction('cameraOverlay.camera.type=\'back\'')">
+            Back
+        </button>		
+
+		<button onclick="agate.runAction('cameraOverlay.camera.takePicture()')">
+            Take
+        </button>
+
+		<button onclick="agate.runAction('cameraOverlay.camera.save()')">
+            Save
+        </button>
+
+		<button onclick="agate.runAction('cameraOverlay.camera.imageCapture()')">
+            imageCapture
+        </button>
+    </center>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Created by MoSPI.org on 11.12.2012
+
+	Permission is granted to copy, distribute, modify under the terms of Citrine License.
+
+	Copyright (C) MoSPI.org. All rights reserved.
+-->
+<MOML version="1.1.0">
+	<FUNCTIONLIST>
+		<FUNCTION id="navigation">
+            <FUNCTIONITEM condition="navigation.selectedItem=='page1'" cmd="navigation.selectedItem='page2'" elseCmd="navigation.selectedItem='page1'"/>
+		</FUNCTION>
+	</FUNCTIONLIST>
+    <THEMES id="theme1" >
+        <THEME id="textLabel" fontSize="12" fontColor="#753300" />
+        <THEME id="defaultButton" parent="textLabel" fontColor="#333333" fontShadow="#ffffff" defaultImg="img/citrine/btn.png" />
+        <THEME element="BUTTON" parent="defaultButton" />
+        <THEME element="LABEL" parent="textLabel" />
+        <THEME element="CHECKBOX" parent="textLabel" style="android" />
+        <THEME element="RADIO" parent="textLabel" />
+        <THEME id="section" element="LABEL" parent="textLabel" fontStyle="bold|italic" fontSize="13" />
+
+        <THEME id="bgImg" defaultImg="img/citrine/windowBg.png" />
+        <THEME id="bg" element="WINDOW" parent="bgImg" />
+        <THEME id="bg" element="NAVIGATIONCONTAINER" parent="bgImg" />
+
+        <THEME id="table" element="WINDOW" defaultImg="#753300"  />
+        <THEME id="td" element="LABEL" parent="textLabel" textAlign="vCenter" margin="1,1,1,1" padding="2,2,2,2" defaultImg="#fff9df"  />
+        <THEME id="th" element="LABEL" parent="td" defaultImg="#fbe57e" fontColor="#333333"  fontStyle="bold" />
+
+        <THEME id="ex" element="LABEL" fontSize="10" fontColor="#884411" defaultImg="#33000000" />
+        <THEME id="ex" element="EDIT" fontColor="#884411" fontSize="10" defaultImg="#33000000" enable="false" />
+        <THEME id="title" element="LABEL" fontColor="#333333" textAlign="center" fontSize="16" fontShadow="#fffdfaff" fontStyle="bold|italic" defaultImg="img/citrine/titleBarBg.png" />
+        <THEME id="star" element="IMAGE" layout="12,12" defaultImg="img/redStar.png"  />
+        <THEME id="back" element="BUTTON" layout="0,0,48,30" defaultImg="img/citrine/btn_back.png" onClick="root.navigation.back" />
+
+        <THEME id="listItem" element="BUTTON" fontColor="#753300" textAlign="center" fontSize="12" fontShadow="#ffffffff" defaultImg="img/citrine/list_item_bg.png" pressedImg="img/citrine/list_item_bg_pressed.png"/>
+        <THEME id="listItemText" element="LABEL" fontColor="#753300" textAlign="left" layout1="200,auto" margin="10,0,5,0" fontSize="14" fontShadow="#ffffffff"  />
+        <THEME id="listItemArrow" element="LABEL" layout="20,20" defaultImg="img/citrine/list_item_right_arrow.png" margin="0,0,5,0" />
+
+
+        <THEME id="copyRight" element="LABEL" fontSize="12" fontColor="#333333" fontShadow="#fffdfaff" />
+        <THEME id="copyRightLink" element="LABEL" parent="copyRight" fontColor="#3333cc" fontStyle="underline"/>
+        <THEME id="codeBg" element="WINDOW" defaultImg="#11000000" scroll="vertical" align="linear:vertical" />
+        <THEME id="code" element="LABEL" fontColor="#884411" fontSize="10" defaultImg1="#30110000" />
+        <THEME id="codeBold" parent="code" fontColor="#dd4411" fontStyle="bold"/>
+
+        <THEME id="bgColor"	defaultImg="#fdf7d9" />
+    </THEMES>
+    <UI>
+		<UILAYOUT portrait="320,460" landscape="320,460" theme="theme1">
+			<WINDOW themeId="bg" layout="0,0,320,460" >
+				<LABEL layout="0,0,320,30" themeId="title" text="Mosaic">
+					<BUTTON themeId="back" visible="invisible"/>
+				</LABEL>
+
+				<NAVIGATIONCONTAINER id="navigation" layout="10,35,300,300" selectedItem="page1" onClick="function.navigation">
+					<VIEWITEM id="page1" src="page1.xml" transitionInEffect="mosaic:random"/>
+                    <VIEWITEM id="page2" src="page2.xml" transitionInEffect="mosaic:right|down" />
+                </NAVIGATIONCONTAINER>
+				<WINDOW themeId="codeBg" layout="10,340,300,50" >
+					<LABEL themeId="code" text="&lt;VIEWITEM id=&quot;page2&quot; src=&quot;page2.xml&quot;"/>
+					<WINDOW align="linear:horizontal">
+						<LABEL themeId="code" text=" transitionInEffect="/>
+						<LABEL themeId="codeBold" text="&quot;mosaic:right|down&quot;"/>
+					</WINDOW>
+					<WINDOW align="linear:horizontal">
+						<LABEL themeId="code" text=" transitionOutEffect="/>
+						<LABEL themeId="codeBold" text="&quot;mosaic:random&quot;"/>
+					</WINDOW>
+					<LABEL themeId="code" text="/&gt;"/>
+				</WINDOW>
+
+				<BUTTON layout="5,410,100,40" text="Prev" onClick="root.navigation.selectedItem='innerCube'" visible="invisible"/>
+				<BUTTON layout="110,410,100,40" text="Change page" onClick="function.navigation"/>
+				<BUTTON layout="215,410,100,40" text="Next" onClick="root.navigation.selectedItem='move'" visible="invisible"/>
+
+			</WINDOW>
+		</UILAYOUT>
+	</UI>
+</MOML>

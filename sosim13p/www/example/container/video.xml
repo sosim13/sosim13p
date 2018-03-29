@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Created by MoSPI.org on 11.20.2012
+
+	Permission is granted to copy, distribute, modify under the terms of Citrine License.
+
+	Copyright (C) MoSPI.org. All rights reserved.
+-->
+<MOML version="1.1.0">
+    <FUNCTIONLIST>
+	    <FUNCTION id="onSavePicture">
+	        <FUNCTIONITEM cmd="label.text=parameter.param[0]"/> 
+		</FUNCTION>
+	</FUNCTIONLIST>
+  	<THEMES id="theme1" >
+	  	<THEME id="btn1" element="BUTTON" layout="70,30" parent="defaultButton"/>
+ 	</THEMES>
+	<UI>
+		<UILAYOUT portrait="320,460" landscape="320,460" theme="theme1">
+				<LABEL layout="0,0,320,30" themeId="title" text="Video">
+					<BUTTON themeId="back"/>
+				</LABEL>
+				<WINDOW themeId="bg" layout="0,30,320,460" >
+
+				<VIDEO id="video" layout="10,10,300,250" src="http://mospi.org/sample/agateapi/res/video/moml.mp4" captionSrc="http://mospi.org/sample/agateapi/res/video/moml.smi"/>
+				
+				<WINDOW layout="10,270,300,30" align="linear:hJustify">
+				    <BUTTON themeId="btn1" text="play" onClick="video.play"/>
+				    <BUTTON themeId="btn1" text="pause" onClick="video.pause"/>
+				    <BUTTON themeId="btn1" text="stop" onClick="video.stop"/>
+				    <BUTTON themeId="btn1" text="caption" onClick="video.caption = !video.caption"/>				    
+				</WINDOW>
+
+<!--
+Ex)
+<VIDEO id="video" layout="10,10,300,250" src="http://mospi.org/sample/agateapi/res/video/moml.mp4" captionSrc="http://mospi.org/sample/agateapi/res/video/moml.smi"/>
+<WINDOW layout="10,305,300,30" align="linear:hJustify">
+    <BUTTON layout="70,30" text="play" onClick="video.play"/>
+    <BUTTON layout="70,30" text="pause" onClick="video.pause"/>
+    <BUTTON layout="70,30" text="stop" onClick="video.stop"/>
+    <BUTTON layout="70,30" text="caption" onClick="video.caption = !video.caption"/>				    
+</WINDOW>
+
+-->				
+<WINDOW themeId="codeBg" layout="10,310,300,auto" align="linear:vertical" scroll="horizontal">
+<LABEL themeId="code" text="Ex)" />
+<LABEL themeId="code" text="&lt;VIDEO id=&quot;video&quot; layout=&quot;10,10,300,250&quot; src=&quot;http://mospi.org/sample/agateapi/res/video/moml.mp4&quot; captionSrc=&quot;http://mospi.org/sample/agateapi/res/video/moml.smi&quot;/&gt;" />
+<LABEL themeId="code" text="&lt;WINDOW layout=&quot;10,305,300,30&quot; align=&quot;linear:hJustify&quot;&gt;" />
+<LABEL themeId="code" text="    &lt;BUTTON layout=&quot;70,30&quot; text=&quot;play&quot; onClick=&quot;video.play&quot;/&gt;" />
+<LABEL themeId="code" text="    &lt;BUTTON layout=&quot;70,30&quot; text=&quot;pause&quot; onClick=&quot;video.pause&quot;/&gt;" />
+<LABEL themeId="code" text="    &lt;BUTTON layout=&quot;70,30&quot; text=&quot;stop&quot; onClick=&quot;video.stop&quot;/&gt;" />
+<LABEL themeId="code" text="    &lt;BUTTON layout=&quot;70,30&quot; text=&quot;caption&quot; onClick=&quot;video.caption = !video.caption&quot;/&gt;                    " />
+<LABEL themeId="code" text="&lt;/WINDOW&gt;" />
+
+</WINDOW>
+			</WINDOW>
+		</UILAYOUT>
+	</UI>
+</MOML>

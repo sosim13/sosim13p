@@ -1,0 +1,28 @@
+/* ==========================================================================
+  font-face
+   ========================================================================== */
+
+@font-face {
+	font-family:'NGNormal';
+	font-style:normal;
+	font-weight:400;
+	src:url('../font/NanumGothic.eot');
+	src:local(¡Ø), url('../font/NanumGothic.eot') format('embedded-opentype'), url('../font/NanumGothic.woff') format('woff');/*, url('../font/NanumGothic.otf') format('opentype'); */
+}
+@font-face {
+	font-family:'NGBold';
+	font-style:normal;
+	font-weight:600;
+	src:url('../font/NanumGothicBold.eot');
+	src:local(¡Ø), url('../font/NanumGothicBold.eot') format('embedded-opentype'), url('../font/NanumGothicBold.woff') format('woff');/* , url('../font/NanumGothicBold.otf') format('opentype'); */
+}
+
+body {margin:0px;padding:0px;font:normal 13px/1.5 "³ª´®°íµñ", NanumGothic, NGNormal, "µ¸¿ò", Dotum, Arial, Tahoma , Geneva, Verdana;color:#666;}
+.summary p {
+    margin-left: 0px;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+
+

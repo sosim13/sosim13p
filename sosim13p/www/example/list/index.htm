@@ -1,0 +1,60 @@
+<html>
+<head>
+    <meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" />
+    <title>AGATE API Demo</title>
+</head>
+<body>
+    <a href="javascript:" onclick="history.back()" >back</a> 
+    <h3>
+        List
+    </h3>
+    <hr />
+        <div class="listOverlay" id="listOverlay" style="width:80%;height:50%">
+            <script type="xml/momloverlay">
+                <list id="list" dataSource="http://yooic.com/agate/list/listData.xml"
+                    dataList="/IMAGELIST/ITEM" defaultImg="#80f0e8d5">
+                    <listlayout>
+                        <window layout="0,0,parent.width,80" >
+                            <image layout="5,5,70,70" defaultImg="{xpath.evaluate('@src')}" />
+                            
+                            <label layout="100,10,parent.width-100,30"
+                                text="{xpath.evaluate('@title')}"
+                                fontSize="15" fontColor="#3060c0"/>
+                                
+                            <label layout="100,40,parent.width-100,30"
+                                text="{xpath.evaluate('@artist')}"
+                                fontSize="12" fontColor="#80e0b0"/>
+                        </window>
+                    </listlayout>
+                </list>
+            </script>
+        </div>
+        
+        <p>Source :</p>
+<div style="width:100%;overflow:scroll;background-color:#f0f0f0">
+<pre>
+&lt;div class=&quot;listOverlay&quot; id=&quot;Div1&quot; style=&quot;width:100%;height:70%&quot;&gt;
+&lt;script type=&quot;xml/momloverlay&quot;&gt;
+  &lt;list id=&quot;list&quot; dataSource=&quot;http://yooic.com/agate/list/listData.xml&quot;
+    dataList=&quot;/IMAGELIST/ITEM&quot; &gt;
+    &lt;listlayout&gt;
+      &lt;window layout=&quot;0,0,parent.width,80&quot; &gt;
+        &lt;image layout=&quot;5,5,70,70&quot; defaultImg=&quot;\{xpath.evaluate('@src')\}&quot; /&gt;
+        
+        &lt;label layout=&quot;100,10,parent.width-100, 30&quot;
+          text=&quot;\{xpath.evaluate('@title')\}&quot; 
+          fontSize=&quot;15&quot; fontColor=&quot;#3060c0&quot;/&gt;
+          
+        &lt;label layout=&quot;100,40,parent.width-100, 30&quot; 
+          text=&quot;\{xpath.evaluate('@artist')\}&quot; 
+          fontSize=&quot;12&quot; fontColor=&quot;#80e070&quot;/&gt;
+      &lt;/window&gt;
+    &lt;/listlayout&gt;
+  &lt;/list&gt;
+&lt;/script&gt;
+&lt;/div&gt;
+</pre>        
+</div>        
+
+</body>
+</html>

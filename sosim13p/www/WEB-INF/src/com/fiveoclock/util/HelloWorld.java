@@ -48,7 +48,7 @@ public class HelloWorld extends HttpServlet {
 		    conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/sosim13p","sosim13p","rlaworud1@");
 	
 			
-			query = "select updateDate from oneminute where no = 1 ";
+			query = "select DATE_FORMAT(updateDate,'%Y-%m-%d %H:%i:%s') as updateDate from oneminute where no = 1 ";
 			pstmt = conn.prepareStatement(query);
 			rs = pstmt.executeQuery();
 			if ( rs.next()){
